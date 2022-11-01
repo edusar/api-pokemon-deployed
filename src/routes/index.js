@@ -67,7 +67,7 @@ const getAllPokemons= async(req,res)=>{
             const dBCall = await Pokemon.findAll({
                 include:{model:Type}
             })
-            const apiCall = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=5`)
+            const apiCall = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=150`)
             const pokeArray = []
             
             const pokemonsApi = await apiCall.data.results
